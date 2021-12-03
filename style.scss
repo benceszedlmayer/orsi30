@@ -166,6 +166,10 @@ $secondary-font: 'Cookie', cursive;
                 top: -30%;
                 height: 350px;
             }
+
+            #boots {
+                object-position: center -160px;
+            }
         }
 
         &__location-wrapper {
@@ -174,7 +178,7 @@ $secondary-font: 'Cookie', cursive;
 
             .line-wrapper {
                 overflow: hidden;
- 
+
                 &:last-child {
                     text-align: center;
                     margin-top: 32px;
@@ -197,7 +201,6 @@ $secondary-font: 'Cookie', cursive;
                     opacity: 1;
                     transform: translateY(0);
                 }
-
             }
         }
 
@@ -268,5 +271,11 @@ $secondary-font: 'Cookie', cursive;
         font-family: $secondary-font;
         color: $green;
         margin-bottom: 40px;
+    }
+}
+
+@media screen and (min-width: 535px) {
+    .orsi {
+        display: none;
     }
 }

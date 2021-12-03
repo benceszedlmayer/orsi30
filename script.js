@@ -72,14 +72,14 @@ document.addEventListener('DOMContentLoaded', () => {
     )
     .addTo(controller);
 
-  const pearlsImage = document.getElementById('pearls');
+  const locationImage = document.getElementById('location');
   new ScrollMagic.Scene({
-    triggerElement: '#pearls-wrapper',
+    triggerElement: '#location-wrapper',
     duration: '100%',
     triggerHook: 0.8,
   })
     .setTween(
-      TweenMax.from(pearlsImage, 1, {
+      TweenMax.from(locationImage, 1, {
         y: '-15%',
         ease: Power0.easeNone,
       })

@@ -157,6 +157,10 @@ h6 {
   height: 350px;
 }
 
+.orsi .info__image-wrapper #boots {
+  object-position: center -160px;
+}
+
 .orsi .info__location-wrapper {
   text-align: left;
   margin-bottom: 24px;
@@ -252,5 +256,11 @@ h6 {
   font-family: "Cookie", cursive;
   color: #5c7457;
   margin-bottom: 40px;
+}
+
+@media screen and (min-width: 535px) {
+  .orsi {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
