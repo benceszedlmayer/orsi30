@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/ico" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="libs/countdownjs/countDown.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="libs/swipebox/swipebox.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Orsi 30</title>
+  </head>
+  <body>
+    <main class="orsi">
+      <div class="header">
+        <span class="header__sub">A nővéred lehetnék</span>
+        <h1 id="title" class="header__title title">Orsi30</h1>
+      </div>
+
+      <div class="main-image">
+        <img id="orsi" src="assets/images/orsi.jpg" alt="Orsi" />
+      </div>
+
+      <div class="countdown">
+        <span class="countdown__title">MÁR CSAK</span>
+        <div class="countdown__wrapper"></div>
+      </div>
+
+      <div class="info">
+        <h2 class="info__title title">Infók</h2>
+
+        <div id="pearl-wrapper" class="info__image-wrapper">
+          <img id="pearls" src="assets/images/pearls.jpg" alt="Pearls" />
+        </div>
+
+        <div class="info__location-wrapper">
+          <span class="info__location-title subtitle">Helyszín</span>
+          <div id="location-reveal" class="info__location-reveal">
+            <div class="line-wrapper">
+              <p class="line">Könyvvez helyett...</p>
+            </div>
+            <div class="line-wrapper"><p class="line">Stat2 helyett...</p></div>
+            <div class="line-wrapper"><p class="line">Vapa helyett...</p></div>
+            <div class="line-wrapper">
+              <p class="line">Korrelálatlanság helyett...</p>
+            </div>
+            <div class="line-wrapper"><p class="line">Makró helyett...</p></div>
+            <div class="line-wrapper">
+              <p class="line">Vállpü helyett...</p>
+            </div>
+            <div class="line-wrapper">
+              <p class="line">Üzleti kommunikáció helyett...</p>
+            </div>
+            <div class="line-wrapper">
+              <p class="line">Minden helyett is...</p>
+            </div>
+            <div class="line-wrapper">
+              <p class="line">Felesek, kávé, zenegép, darts meg amúgyis...</p>
+            </div>
+            <div class="line-wrapper">
+              <p class="line line--large">Itt kezdődött MINDEN!</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="boots-wrapper" class="info__image-wrapper">
+          <img
+            id="boots"
+            class="info__image"
+            src="assets/images/boots.jpg"
+            alt="Boots"
+          />
+        </div>
+
+        <div class="info__dress-code-wrapper">
+          <span class="info__dress-code-title subtitle">Dress Code</span>
+          <div id="reveal-lines" class="info__dress-code-reveal">
+            <p class="line">Csinosba, de mászkálni kell,</p>
+            <p class="line">Mély dekoltázs, de sállal,</p>
+            <p class="line">Harisnya is majd kell,</p>
+            <p class="line">Kabát is nagy vállal.</p>
+            <br />
+            <p class="line">Füstös szemnek nincs párja,</p>
+            <p class="line">Russian Red kiegészíti,</p>
+            <p class="line">Csak a fotózkodást várja,</p>
+            <p class="line">Egész estét megszépíti.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <h2 class="gallery__title title">Képek</h2>
+        <div class="gallery__wrapper">
+          <a href="assets/images/1.jpg" class="swipebox">
+            <img class="photo" src="assets/images/1.jpg" />
+          </a>
+          <a href="assets/images/2.jpg" class="swipebox">
+            <img class="photo" src="assets/images/2.jpg" />
+          </a>
+          <a href="assets/images/3.jpg" class="swipebox">
+            <img class="photo" src="assets/images/3.jpg" />
+          </a>
+          <a href="assets/images/4.jpg" class="swipebox">
+            <img class="photo" src="assets/images/4.jpg" />
+          </a>
+          <a href="assets/images/5.jpg" class="swipebox">
+            <img class="photo" src="assets/images/5.jpg" />
+          </a>
+          <a href="assets/images/6.jpg" class="swipebox">
+            <img class="photo" src="assets/images/6.jpg" />
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <script src="libs/countdownjs/countDown.min.js"></script>
+    <script src="libs/swipebox/jquery.swipebox.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
