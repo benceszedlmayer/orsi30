@@ -58,6 +58,23 @@ h6 {
   isolation: isolate;
 }
 
+.desktop {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5625e;
+  padding: 100px;
+}
+
+.desktop h1 {
+  color: white;
+  font-family: "Cookie", cursive;
+  font-size: 54px;
+  text-align: center;
+}
+
 .orsi {
   padding: 30px;
   padding-bottom: 0;
@@ -261,6 +278,9 @@ h6 {
 @media screen and (min-width: 535px) {
   .orsi {
     display: none;
+  }
+  .desktop {
+    display: flex;
   }
 }
 /*# sourceMappingURL=style.css.map */

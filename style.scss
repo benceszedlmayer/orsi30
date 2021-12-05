@@ -64,6 +64,22 @@ $green: #5c7457;
 $black: #191919;
 $secondary-font: 'Cookie', cursive;
 
+.desktop {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: $red;
+    padding: 100px;
+    h1 {
+        color: white;
+        font-family: $secondary-font;
+        font-size: 54px;
+        text-align: center;
+    }
+}
+
 .orsi {
     padding: 30px;
     padding-bottom: 0;
@@ -277,5 +293,8 @@ $secondary-font: 'Cookie', cursive;
 @media screen and (min-width: 535px) {
     .orsi {
         display: none;
+    }
+    .desktop {
+        display: flex;
     }
 }
