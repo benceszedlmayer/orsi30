@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const orsiImage = document.getElementById('orsi');
   const bootsImage = document.getElementById('boots');
-  const pageTitle = document.getElementById('title');
 
   // build scenes
   new ScrollMagic.Scene({
@@ -55,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       TweenMax.from(orsiImage, 1, {
         y: '-15%',
         ease: Power0.easeNone,
-      })
+      }),
     )
     .addTo(controller);
 
@@ -68,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
       TweenMax.from(bootsImage, 1, {
         y: '-15%',
         ease: Power0.easeNone,
-      })
+      }),
     )
     .addTo(controller);
 
@@ -82,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       TweenMax.from(locationImage, 1, {
         y: '-15%',
         ease: Power0.easeNone,
-      })
+      }),
     )
     .addTo(controller);
 
@@ -97,14 +96,50 @@ document.addEventListener('DOMContentLoaded', () => {
       .addTo(controller);
   }
 
-  const revealPhotos = document.getElementsByClassName('photo');
-  for (var i = 0; i < revealPhotos.length; i++) {
-    new ScrollMagic.Scene({
-      triggerElement: revealPhotos[i],
-      offset: 80,
-      triggerHook: 0.9,
+  /* Firebase */
+  firebase.initializeApp({
+    apiKey: 'AIzaSyC2RgbVswj1eJyt5xEq7Wa3-ceB_CWWpOI',
+    authDomain: 'orsi-30.firebaseapp.com',
+    projectId: 'orsi-30',
+    storageBucket: 'orsi-30.appspot.com',
+  });
+
+  var storage = firebase.storage();
+  var storageRef = storage.ref('images');
+  const gallery = document.getElementById('gallery');
+
+  storageRef
+    .listAll()
+    .then(function (result) {
+      result.items.forEach(function (imageRef) {
+        imageRef
+          .getDownloadURL()
+          .then(function (url) {
+            // TODO: Display the image on the UI
+            const anchor = document.createElement('a');
+            anchor.href = url;
+            anchor.className = 'swipebox';
+            const image = document.createElement('img');
+            image.className = 'photo';
+            image.src = url;
+            anchor.appendChild(image);
+            gallery.appendChild(anchor);
+
+            new ScrollMagic.Scene({
+              triggerElement: image,
+              offset: 80,
+              triggerHook: 0.9,
+            })
+              .setClassToggle(image, 'visible')
+              .addTo(controller);
+          })
+          .catch(function (error) {
+            // Handle any errors
+          });
+      });
     })
-      .setClassToggle(revealPhotos[i], 'visible')
-      .addTo(controller);
-  }
+    .catch(function (error) {
+      // Handle any errors
+      console.log(error);
+    });
 });
